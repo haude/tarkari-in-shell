@@ -26,6 +26,6 @@ csv_to_json() {
 	sh csv_to_json.sh $1 #> $TMP_DIR/$TARKARI_DATA_FORMAT.json
 }
 
-#get_data
+get_data
 url_to_csv
 csv_to_json $TMP_DIR/$TARKARI_DATA_FORMAT.csv
