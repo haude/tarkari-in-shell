@@ -39,7 +39,7 @@ class ParsetThread(ParserTarkari,QThread):
     
     def run(self):
         data = self.prepare_data()
-        print(data)
+        
         self.dataready.emit(data)
         
     
