@@ -33,10 +33,3 @@ class Mainwindow(QtGui.QMainWindow):
         self.ui.treeWidget.topLevelItem(0).setText(4,data[4])
     
     
-if __name__ == "__main__":
-    import sys
-    app = QtGui.QApplication(sys.argv)
-    myui = Mainwindow()
-    
-    myui.show()
-    sys.exit(app.exec_())
