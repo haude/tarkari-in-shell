@@ -1,6 +1,11 @@
-tarkari-in-shell
-================
+# tarkari-in-shell
+:curry: तरकारि in python(gui)
 
-तरकारि in Shell... lacks proper data source
+Just started working around to try this run
 
-I don't do readmez
+
+`python app.py `
+
+file > refresh_data
+
+till now only works for a single tomato , will add functions later

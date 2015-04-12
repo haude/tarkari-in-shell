@@ -1,0 +1,9 @@
+*.pyc
+__pycache__
+icons
+*.ico
+*.*~
+.project
+.pydevproject
+.settings/org.eclipse.core.resources.prefs
+

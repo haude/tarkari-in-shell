@@ -1,0 +1,12 @@
+<RCC>
+  <qresource>
+    <file>resource.qrc</file>
+    <file>icons/gears.ico</file>
+    <file>icons/not_available.ico</file>
+    <file>icons/progress.ico</file>
+    <file>icons/protection.ico</file>
+    <file>icons/sun.ico</file>
+    <file>icons/phone_book.ico</file>
+		
+ </qresource>
+</RCC>
