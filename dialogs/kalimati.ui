@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>693</width>
+    <height>524</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QTreeWidget" name="treeWidget">
+      <property name="columnCount">
+       <number>5</number>
+      </property>
+      <attribute name="headerMinimumSectionSize">
+       <number>70</number>
+      </attribute>
+      <attribute name="headerShowSortIndicator" stdset="0">
+       <bool>false</bool>
+      </attribute>
+      <attribute name="headerStretchLastSection">
+       <bool>true</bool>
+      </attribute>
+      <column>
+       <property name="text">
+        <string>commodity     </string>
+       </property>
+       <property name="font">
+        <font>
+         <weight>75</weight>
+         <bold>true</bold>
+         <strikeout>false</strikeout>
+        </font>
+       </property>
+       <property name="icon">
+        <iconset resource="resource.qrc">
+         <normaloff>:/icons/progress.ico</normaloff>:/icons/progress.ico</iconset>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>unit</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>min</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>max</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>average</string>
+       </property>
+      </column>
+      <item>
+       <property name="text">
+        <string>kera</string>
+       </property>
+       <property name="text">
+        <string>1 dozen</string>
+       </property>
+       <property name="text">
+        <string>30</string>
+       </property>
+       <property name="text">
+        <string>35</string>
+       </property>
+       <property name="text">
+        <string>32</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>banana</string>
+       </property>
+       <property name="text">
+        <string>2 dozan</string>
+       </property>
+       <property name="text">
+        <string>55</string>
+       </property>
+       <property name="text">
+        <string>60</string>
+       </property>
+       <property name="text">
+        <string>58</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>693</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>file</string>
+    </property>
+    <addaction name="actionRefresh_data"/>
+    <addaction name="actionClose"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>help</string>
+    </property>
+    <addaction name="actionUsage"/>
+    <addaction name="actionAbout"/>
+   </widget>
+   <widget class="QMenu" name="menuEdit">
+    <property name="title">
+     <string>edit</string>
+    </property>
+    <addaction name="actionWholsale_price"/>
+    <addaction name="actionRetail_price"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuEdit"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionRefresh_data">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/icons/gears.ico</normaloff>:/icons/gears.ico</iconset>
+   </property>
+   <property name="text">
+    <string>refresh data</string>
+   </property>
+  </action>
+  <action name="actionClose">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/icons/sun.ico</normaloff>:/icons/sun.ico</iconset>
+   </property>
+   <property name="text">
+    <string>close</string>
+   </property>
+  </action>
+  <action name="actionUsage">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/icons/not_available.ico</normaloff>:/icons/not_available.ico</iconset>
+   </property>
+   <property name="text">
+    <string>usage</string>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/icons/protection.ico</normaloff>:/icons/protection.ico</iconset>
+   </property>
+   <property name="text">
+    <string>about</string>
+   </property>
+  </action>
+  <action name="actionWholsale_price">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>wholsale price</string>
+   </property>
+  </action>
+  <action name="actionRetail_price">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>retail price</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="resource.qrc"/>
+ </resources>
+ <connections/>
+</ui>
