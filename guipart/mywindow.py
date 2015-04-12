@@ -5,7 +5,7 @@ Created on Apr 12, 2015
 '''
 from dialogs.MainWindow import  Ui_MainWindow
 from PyQt4 import QtGui, QtCore
-from utils.tarkari import ParserTarkari
+from utils.tarkari import ParsetThread
 
 class Mainwindow(QtGui.QMainWindow):
     def __init__(self):
@@ -13,7 +13,8 @@ class Mainwindow(QtGui.QMainWindow):
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
         self.connectSignals()
-        self.parsser = ParserTarkari()
+        self.threadedparser = ParsetThread()
+        
     
     def connectSignals(self):
         self.ui.actionUsage.triggered.connect(self.update_commodity)
@@ -22,14 +23,17 @@ class Mainwindow(QtGui.QMainWindow):
     def update_commodity(self):
         self.ui.treeWidget.topLevelItem(0).setText(0,"just practice")
     
-    def oops(self):
-        data = self.parsser.prepare_data()
-        print(type(data))
+    def oops(self,data):
+        self.threadedparser.start()
+        self.threadedparser.dataready.connect(self.display_data)
+        
+        
+#         self.ui.treeWidget.topLevelItem(0).setText(0,data[0])
+#         self.ui.treeWidget.topLevelItem(0).setText(2,data[2])
+#         self.ui.treeWidget.topLevelItem(0).setText(3,data[3])
+#
+    def display_data(self,data):
         print(data)
-        self.ui.treeWidget.topLevelItem(0).setText(0,data[0])
-        self.ui.treeWidget.topLevelItem(0).setText(2,data[2])
-        self.ui.treeWidget.topLevelItem(0).setText(3,data[3])
-        self.ui.treeWidget.topLevelItem(0).setText(1,data[1])
-        self.ui.treeWidget.topLevelItem(0).setText(4,data[4])
-    
+        for i in range(len(data)):
+            self.ui.treeWidget.topLevelItem(0).setText(i,data[i])
     

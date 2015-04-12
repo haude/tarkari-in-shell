@@ -5,7 +5,7 @@ Created on Apr 11, 2015
 '''
 import requests
 import BeautifulSoup
-
+from PyQt4.Qt import QThread,pyqtSignal
 
 
 myurl = "http://kalimatimarket.com.np/home/rpricelist"
@@ -32,3 +32,14 @@ class ParserTarkari(DataDownloader):
         print(self.get_tree())
 
 
+class ParsetThread(ParserTarkari,QThread):
+    dataready = pyqtSignal(list)
+    def __init__(self):
+        QThread.__init__(self)
+    
+    def run(self):
+        data = self.prepare_data()
+        print(data)
+        self.dataready.emit(data)
+        
+    
